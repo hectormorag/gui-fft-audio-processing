@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_9">
+    <item>
+     <widget class="QGroupBox" name="groupBoxLeft">
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>861</width>
+         <height>531</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayoutLeft"/>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_5">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxRight">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Settings</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_1">
+         <item>
+          <widget class="QLabel" name="lblmic">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Microphone</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox"/>
+       </item>
+       <item>
+        <widget class="Line" name="line_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>149</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pbMic">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>microphone.png</normaloff>
+           <normalon>microphone.png</normalon>microphone.png</iconset>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pbPlay">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>play.png</normalon>
+          </iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pbPause">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>pause.png</normaloff>
+           <normalon>pause.png</normalon>pause.png</iconset>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>148</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Lecture/Session 5/ImageEditor/open.png</normaloff>../Lecture/Session 5/ImageEditor/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Lecture/Session 5/ImageEditor/save.png</normaloff>../Lecture/Session 5/ImageEditor/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Lecture/Session 5/ImageEditor/print.png</normaloff>../Lecture/Session 5/ImageEditor/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset>
+     <normaloff>../Lecture/Session 5/ImageEditor/Quit.png</normaloff>../Lecture/Session 5/ImageEditor/Quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionGrayscale">
+   <property name="text">
+    <string>Grayscale</string>
+   </property>
+  </action>
+  <action name="actionCanny">
+   <property name="text">
+    <string>Canny</string>
+   </property>
+  </action>
+  <action name="actionNegative">
+   <property name="text">
+    <string>Negative</string>
+   </property>
+  </action>
+  <action name="actionHistogramEQ">
+   <property name="text">
+    <string>Histogram Equal</string>
+   </property>
+  </action>
+  <action name="actionRGBtoBGR">
+   <property name="text">
+    <string>RGB to BGR</string>
+   </property>
+  </action>
+  <action name="actionGaussan">
+   <property name="text">
+    <string>Gaussan</string>
+   </property>
+  </action>
+  <action name="actionHigh_Boost">
+   <property name="text">
+    <string>High Boost</string>
+   </property>
+  </action>
+  <action name="actionLaplacian">
+   <property name="text">
+    <string>Laplacian</string>
+   </property>
+  </action>
+  <action name="actionFilter_Average">
+   <property name="text">
+    <string>Median</string>
+   </property>
+  </action>
+  <action name="actionUnsharp">
+   <property name="text">
+    <string>Unsharp</string>
+   </property>
+  </action>
+  <action name="actionCh_ng_5">
+   <property name="text">
+    <string>Chương 5</string>
+   </property>
+  </action>
+  <action name="actionTanSo">
+   <property name="text">
+    <string>Ảnh Miền Tần Số</string>
+   </property>
+  </action>
+  <action name="actionIdeal_LPF">
+   <property name="text">
+    <string>Ideal LPF</string>
+   </property>
+  </action>
+  <action name="actionButter_LPF">
+   <property name="text">
+    <string>Butterworth LPF</string>
+   </property>
+  </action>
+  <action name="actionGaussian_LPF">
+   <property name="text">
+    <string>Gaussian LPF</string>
+   </property>
+  </action>
+  <action name="actionIdeal_HPF">
+   <property name="text">
+    <string>Ideal HPF</string>
+   </property>
+  </action>
+  <action name="actionButterworth_HPF">
+   <property name="text">
+    <string>Butterworth HPF</string>
+   </property>
+  </action>
+  <action name="actionGaussian_HPF">
+   <property name="text">
+    <string>Gaussian HPF</string>
+   </property>
+  </action>
+  <action name="actiondilate">
+   <property name="text">
+    <string>dilate</string>
+   </property>
+  </action>
+  <action name="actionErode">
+   <property name="text">
+    <string>Erode</string>
+   </property>
+  </action>
+  <action name="actionOpen_2">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionHit_miss">
+   <property name="text">
+    <string>Hit-miss</string>
+   </property>
+  </action>
+  <action name="actionDilate">
+   <property name="text">
+    <string>Dilate</string>
+   </property>
+  </action>
+  <action name="actionMorboundary">
+   <property name="text">
+    <string>Morboundary</string>
+   </property>
+  </action>
+  <action name="actionGradient">
+   <property name="text">
+    <string>Gradient</string>
+   </property>
+  </action>
+  <action name="actionConvex">
+   <property name="text">
+    <string>Convex</string>
+   </property>
+  </action>
+  <action name="actionx_direcction_Sobel">
+   <property name="text">
+    <string>Sobel X</string>
+   </property>
+  </action>
+  <action name="actiony_direction_Sobel">
+   <property name="text">
+    <string>Sobel Y</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_2">
+   <property name="text">
+    <string>Sobel Laplacian</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_of_Gaussian">
+   <property name="text">
+    <string>Laplacian of Gaussian</string>
+   </property>
+  </action>
+  <action name="actionHough">
+   <property name="text">
+    <string>Hough</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="text">
+    <string>Zoom in</string>
+   </property>
+  </action>
+  <action name="actionRotation">
+   <property name="text">
+    <string>Rotation</string>
+   </property>
+  </action>
+  <action name="actionShearing">
+   <property name="text">
+    <string>Shearing</string>
+   </property>
+  </action>
+  <action name="actionGamma">
+   <property name="text">
+    <string>Gamma</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="text">
+    <string>Zoom out</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionAuthor">
+   <property name="text">
+    <string>Author</string>
+   </property>
+  </action>
+  <action name="actionTranslation">
+   <property name="text">
+    <string>Translation</string>
+   </property>
+  </action>
+  <action name="actionGaussian">
+   <property name="text">
+    <string>Gaussian</string>
+   </property>
+  </action>
+  <action name="actionRayleigh">
+   <property name="text">
+    <string>Rayleigh</string>
+   </property>
+  </action>
+  <action name="actionImpluse">
+   <property name="text">
+    <string>Impluse</string>
+   </property>
+  </action>
+  <action name="actionUniform">
+   <property name="text">
+    <string>Uniform</string>
+   </property>
+  </action>
+  <action name="actionErlang">
+   <property name="text">
+    <string>Erlang</string>
+   </property>
+  </action>
+  <action name="actionHistogram_PDF">
+   <property name="text">
+    <string>Histogram PDF</string>
+   </property>
+  </action>
+  <action name="actionDetecion">
+   <property name="text">
+    <string>HoughLines</string>
+   </property>
+  </action>
+  <action name="actionHoughLines">
+   <property name="text">
+    <string>HoughLines</string>
+   </property>
+  </action>
+  <action name="actionSHT">
+   <property name="text">
+    <string>Standard Hough Transform</string>
+   </property>
+  </action>
+  <action name="actionMedian_Filtering">
+   <property name="text">
+    <string>Median Filtering</string>
+   </property>
+  </action>
+  <action name="actionAdaptive_Wiener_Filtering">
+   <property name="text">
+    <string>Adaptive Wiener Filtering</string>
+   </property>
+  </action>
+  <action name="actionAdaptive_Median_Filtering">
+   <property name="text">
+    <string>Adaptive Median Filtering</string>
+   </property>
+  </action>
+  <action name="actionInverse_Filter">
+   <property name="text">
+    <string>Inverse Filter </string>
+   </property>
+  </action>
+  <action name="actionBlur">
+   <property name="text">
+    <string>Blur</string>
+   </property>
+  </action>
+  <action name="actionBox_Filter">
+   <property name="text">
+    <string>Box Filter</string>
+   </property>
+  </action>
+  <action name="actionMedian_Filter">
+   <property name="text">
+    <string>Median Filter</string>
+   </property>
+  </action>
+  <action name="actionBilateral_Filter">
+   <property name="text">
+    <string>Bilateral Filter</string>
+   </property>
+  </action>
+  <action name="actionGaussian_Filter">
+   <property name="text">
+    <string>Gaussian Filter</string>
+   </property>
+  </action>
+  <action name="actionDirectional_Filtering">
+   <property name="text">
+    <string>Directional Filtering</string>
+   </property>
+  </action>
+  <action name="actionMedian_threshold">
+   <property name="text">
+    <string>Median threshold</string>
+   </property>
+  </action>
+  <action name="actionMedianThreshold">
+   <property name="text">
+    <string>Median threshold</string>
+   </property>
+  </action>
+  <action name="actionDirectionalFiltering">
+   <property name="text">
+    <string>Directional Filtering</string>
+   </property>
+  </action>
+  <action name="action_Butterworth">
+   <property name="text">
+    <string>Butterworth Filter</string>
+   </property>
+  </action>
+  <action name="action_Notch_filter">
+   <property name="text">
+    <string>Notch Filter</string>
+   </property>
+  </action>
+  <action name="actionCartoon">
+   <property name="text">
+    <string>Cartoon</string>
+   </property>
+  </action>
+  <action name="actionDirectional_Filtering_3">
+   <property name="text">
+    <string>Directional Filtering 2</string>
+   </property>
+  </action>
+  <action name="actionDirectional_Filtering_4">
+   <property name="text">
+    <string>Directional Filtering 3</string>
+   </property>
+  </action>
+  <action name="actionT">
+   <property name="text">
+    <string>T</string>
+   </property>
+  </action>
+  <action name="actionEdge_detect">
+   <property name="text">
+    <string>Edge-detect</string>
+   </property>
+  </action>
+  <action name="actionShowToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Toolbar</string>
+   </property>
+  </action>
+  <action name="actionCallLybray21">
+   <property name="text">
+    <string>CallLybray21</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actiontest">
+   <property name="text">
+    <string>test</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
